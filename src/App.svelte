@@ -1,6 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
 	import * as d3 from 'd3';
+	import Lineplot from './Lineplot.svelte';
+	import Ease from './Ease.svelte';
 	var data = [30, 86, 168, 281, 303, 365];
 	
 	let el;
@@ -20,9 +22,10 @@
 	});
 </script>
 
+<Ease />
+
 <div bind:this={el} class="chart"></div>
-
-
+<Lineplot />
 <style>
 	.chart :global(div) {
 		font: 10px sans-serif;
